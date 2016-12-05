@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BooksList</string>
+    <string name="title">title</string>
+    <string name="searchTitle">enter author or book title</string>
+</resources>
