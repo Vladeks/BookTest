@@ -77,10 +77,11 @@ public class BookListActivity extends AppCompatActivity {
         scrollListener = new EndlessRecyclerViewScrollListener(sgLayoutManager) {
             @Override
             public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
+                Log.d("LoadedItems", String.valueOf(bookList.size()));
                 if (rcAdapter.getItemCount() < totalBooksItemCount) {
                     searchBooks(page);
                 }else {
-                    Toast.makeText(getApplicationContext(), "All books are shown", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "All books are loaded", Toast.LENGTH_LONG).show();
                 }
             }
         };
